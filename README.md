@@ -1,4 +1,4 @@
-Base du langage
+#Base du langage
 L'objectif de cette partie est de vous familiariser avec la syntaxe JavaScript. Dans cette partie, vous allez :
 
 Apprendre à déclarer des variables.
@@ -9,7 +9,7 @@ Apprenez à comparer des variables.
 Apprendre à utiliser la boucle for.
 Le code de cet exercice peut être exécuté via Node.js ou dans l'onglet "console" des outils de développement de votre navigateur.
 
-Enoncé 1
+#Enoncé 1
 Définissez une fonction addFavoriteBook(..) qui reçoit un seul paramètre, appelé bookName.
 
 Si la chaîne bookName fournie ne contient PAS le mot "Great", ajoutez-la au tableau favoriteBooks.
@@ -34,7 +34,7 @@ Assurez-vous d'appeler ensuite la fonction printFavoriteBooks() à la fin du pro
 
 Astuce : Utilisez la boucle de style for ( let .. of .. ) { }.
 
-Enoncé 2
+#Enoncé 2
 Cet exercice vise à mettre brièvement en pratique les trois piliers de JS : Types / Coercion, Scope / Closures, et this.
 
 Dans la fonction printFavoriteBooks(), assurez-vous qu'il n'y a pas de conversion de type accidentelle (c'est-à-dire de nombre en chaîne de caractères).
@@ -55,7 +55,7 @@ Créez une instance de la classe Bookshelf, et passez-la en argument à loadBook
 
 Astuce : instanciation de la classe : new Whatever().
 
-Enoncé 3 : Queues
+#Enoncé 3 : Queues
 En informatique, une file d'attente est une structure abstraite de données où les articles sont maintenus en ordre. De nouveaux articles peuvent être ajoutés en fin de file et les anciens articles sont retirés du début de la file.
 
 Écrivez une fonction nextInLine qui prend un tableau (arr) et un nombre (item) comme arguments.
@@ -64,7 +64,7 @@ Ajoutez le nombre à la fin du tableau, puis retirez le premier élément du tab
 
 La fonction nextInLine doit alors renvoyer l'élément qui a été supprimé.
 
-Enoncé 4
+#Enoncé 4
 Dans le jeu de casino Blackjack, un joueur peut obtenir un avantage sur la maison en gardant une trace du nombre relatif de cartes hautes et basses restant dans le jeu. C'est ce qu'on appelle le comptage des cartes.
 
 Le fait d'avoir plus de cartes hautes dans le jeu favorise le joueur. Une valeur est attribuée à chaque carte selon le tableau ci-dessous. Lorsque le décompte est positif, le joueur doit miser la plus haute carte. Lorsque le compte est nul ou négatif, le joueur doit miser faible.
