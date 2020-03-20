@@ -90,3 +90,83 @@ Exemple de sortie
 -3 	Attend
 
 5 	Pari 
+
+
+### Enoncé 5 : Collection de données
+Cet exercice a pour objectif de tester vos connaissance en Objet JS.
+
+On vous remet un objet JSON représentant une partie de votre collection d'albums musicaux. Chaque album a plusieurs propriétés et un numéro d'identification unique comme clé. Tous les albums ne disposent pas d'informations complètes.
+
+Écrivez une fonction qui prend l'identifiant d'un album (comme 2548), une propriété prop (comme "artist" ou "tracks"), et une valeur (comme "Addicted to Love") pour modifier les données de cette collection.
+
+Si prop n'est pas "tracks" et que la valeur n'est pas vide (""), mettez à jour ou définissez la valeur pour la propriété de cet album.
+
+Votre fonction doit toujours retourner l'objet de collection entier.
+
+Il existe plusieurs règles pour traiter les données incomplètes :
+
+-- Si prop est "tracks" mais que l'album n'a pas de propriété "tracks", créez un tableau vide avant d'ajouter la nouvelle valeur à la propriété correspondante de l'album.
+
+-- Si prop est "tracks" et que la valeur n'est pas vide (""), poussez la valeur à la fin du tableau des pistes existantes de l'album.
+
+-- Si la valeur est vide (""), supprimez la propriété prop donnée de l'album.
+
+Conseils
+-- Utilisez la notation par parenthèses lorsque vous accédez aux propriétés d'un objet avec des variables.
+
+-- La méthode Push est une méthode de tableau que vous pouvez consulter sur le réseau des développeurs Mozilla.
+
+-- Vous pouvez vous référer à Manipulating Complex Objects Introducing JavaScript Object Notation (JSON) pour une mise à jour.
+
+Vérification
+-- Vous ne devez pas modifier l'initialisation de l'objet de collection
+
+-- Après updateRecords(5439, "artist", "ABBA"), l'artiste doit être "ABBA"
+
+-- Après updateRecords(5439, "tracks", "Take a Chance on Me"), les tracks devraient
+
+-- avoir "Take a Chance on Me" comme dernier élément.
+
+-- Après updateRecords(2548, "artist", ""), l'artiste ne doit pas être défini
+
+-- Après updateRecords(1245, "tracks", "Addicted to Love"), les tracks devraient avoir "Addicted to Love" comme dernier élément.
+
+-- Après la mise à jour des enregistrements (2468, "tracks", "Free"), les pistes doivent avoir "1999" comme premier élément.
+
+-- Après updateRecords(2548, "tracks", ""), les tracks ne doivent pas être définies
+
+-- Après updateRecords(1245, "album", "Riptide"), l'album doit être "Riptide".
+
+### Enoncé 6
+Nous disposons d'une série d'objets représentant différentes personnes dans nos listes de contacts (voir code starter énoncé-6.js).
+
+Une fonction lookUpProfile qui prend le nom et une propriété (prop) comme arguments a été pré-écrite pour vous.
+
+La fonction doit vérifier si le nom est le prénom d'un contact réel et si la propriété donnée (prop) est une propriété de ce contact.
+
+Si les deux sont vrais, elle renvoie alors la "valeur" de cette propriété.
+
+Si le nom ne correspond à aucun contact, alors retournez "Aucun contact".
+
+Si prop ne correspond à aucune propriété valide d'un contact trouvé correspondant au nom, alors retournez "Aucune propriété de ce type".
+
+Vérification
+-- "Kristian", "lastName" doit renvoyer "Vos".
+
+-- "Sherlock", " likes " doit renvoyer ["Intriguing Cases", "Violin"]
+
+-- "Harry", " likes " doit renvoyer un tableau
+
+-- "Bob", " number " doit renvoyer "Aucun contact".
+
+-- "Bob", " potato " doit retourner "Aucun contact".
+
+-- "Akira", "adresse" doit renvoyer "Aucune propriété de ce type".
+
+### Enoncé 7 : Recursion
+Nous avons défini une fonction appelée rangeOfNumbers avec deux paramètres. La fonction doit renvoyer un tableau d'entiers qui commence par un nombre représenté par le paramètre startNum et se termine par un nombre représenté par le paramètre endNum. Le nombre de départ sera toujours inférieur ou égal au nombre de fin. Votre fonction doit utiliser la récursion en s'appelant elle-même et ne pas utiliser de boucles d'aucune sorte. Elle doit également fonctionner pour les cas où les paramètres startNum et endNum sont identiques.
+
+Vérification
+-- rangeOfNumbers(6, 9) devrait retourner [6, 7, 8, 9].
+
+-- rangeOfNumbers(4, 4) devrait renvoyer [4].
